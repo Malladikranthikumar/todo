@@ -36,6 +36,12 @@ class TodosController < ApplicationController
 		@todos =Todo.all
 	end
 
+	def destroy
+		@todo =Todo.find(params[:id])
+		@todo.destroy
+		flash[:notice]= "Todo has been deleted succesfully"
+		redirect_to todos_path
+	end
 	
 	private
 
