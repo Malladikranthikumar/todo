@@ -1,3 +1,6 @@
 <h2>Show page</h2>
 <p>Name:<%= @todo.name%></p>
 <p>Description:<%= @todo.description%></p>
+
+<%= link_to "Edit",edit_todo_path(@todo)%>
+<%= link_to "Back", todos_path%>
